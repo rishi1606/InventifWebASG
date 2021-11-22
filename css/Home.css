@@ -1,10 +1,11 @@
+
 ul{
 	list-style: none
 }
 .left-text{
 	display: flex;
 	padding:15px;
-	margin-left: 25px
+	margin-left: -15px
 }
 .logo img{
 	width:50px;
@@ -28,8 +29,8 @@ ul{
 .right-text{
 	position: absolute;
 	right: 0;
-	top:18px;
-	right:35px;
+	top:58px;
+	right:155px;
 }
 
 
@@ -37,9 +38,12 @@ ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #f8f9fb;
     height: 60px
  
+}
+.navbar ul 
+{
+  margin-left: -45px;
 }
 .hamburger {
     display: none;
@@ -67,11 +71,10 @@ ul{
     font-size: 1.1rem;
     font-weight: 400;
     color: #475569;
-
 }
 
 .nav-link:hover{
-    color: black;
+    color: #475569;
 }
 
 .buttonham{
@@ -79,28 +82,8 @@ ul{
 	text-decoration: none;
 	
 }
-.main{
-	display: flex;
-}
-.left-content{
-	width:50%;
-}
-.right-content{
-	width: 50%
-}
-.left-content{
-	padding-left:45px;
-	padding-top:15px 
-}
-.left-content h6{
-	font-size: 30px;
-	font-family: sans-serif;
-}
-.right-content{
-	padding-left:45px;
-	padding-top:15px 
-}
-.right-content h6{
+
+h6{
 	font-size: 30px;
 	font-family: sans-serif;
 }
@@ -117,50 +100,45 @@ input[type=text], select, textarea {
 }
 
 
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-}
 
 input[type=submit] {
   background-color: #2382e4;
   color: white;
-  padding: 12px 20px;
+  padding: 12px 18px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  float: right;
-  width: 20%
+  width: 100%
 }
 .container {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
 }
-
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
+.user-validation {
+  display: grid;
+  grid-template-columns: [labels] auto [controls] 1fr;
+  grid-auto-flow: row;
+  grid-gap: .8em;
+  background: #eee;
+  padding: 1.2em;
 }
-
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
+.user-validation > label  {
+  grid-column: labels;
+  grid-row: auto;
+}
+.user-validation > input,
+.user-validation > textarea,
+.user-validation > button {
+  grid-row: auto;
+  border: none;
+  padding: 1em;
+  
 }
 
 /* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.error small{
-	color: #e74c3c;
-	display: none
-}
-@media screen and (max-width: 600px ) {
+
+@media screen and (max-width: 675px ) {
 	.nav-menu {
         position: fixed;
         left: -110%;
@@ -178,7 +156,7 @@ input[type=submit] {
     }
     .navbar{
     	height: 0px;
-    	background: white
+    	
     }
 	.nav-menu i
 	{
@@ -215,24 +193,7 @@ input[type=submit] {
   	margin-left:15px;
   }
   
-  .main{
-  	display: flex;
-  	flex-direction: column;
-
-  }
-  
-  .left-content{
-  	width: 100%
-  }
-  .right-content{
-  	width: 100%
-  }
-  .col-25{
-  	width: 27%
-  }
-  .col-75{
-  	width:73%;
-  }	
+ 
   .fa-times{
 		position: absolute;
 		right: 20px;
